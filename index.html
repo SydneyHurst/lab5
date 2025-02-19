@@ -1,79 +1,111 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Fancy letterheaded paper</title>
+  </head>
+  <body>
+    <div class="letter">
+        <article>
+            <h1>Awesome<br>Company</h1>
+            <h2>Letter Title</h2>
+            <!--Text columns-->
+          <div class="textContain">
+              <p>test Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Praesent nisl dolor, pulvinar et quam in, porta rhoncus ex. 
+                Duis pulvinar eros ligula, sit amet laoreet sapien auctor 
+                sit amet. Morbi semper leo vel eros tincidunt volutpat. Ut 
+                fringilla convallis lacus quis posuere. In nibh tortor, 
+                congue at semper vitae, tristique dictum nulla. Lorem ipsum 
+                dolor sit amet, consectetur adipiscing elit. Cras nec leo 
+                malesuada, blandit velit sit amet, egestas elit. Donec 
+                pellentesque arcu leo, sed dictum urna scelerisque vel. test</p>
 
-<head>
-  <meta charset="utf-8">
-  <title>Hello World!</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" href="img/favicon.ico">
-</head>
+              <p>Vestibulum consequat vehicula libero, suscipit aliquet dui vehicula vel. 
+                Aliquam maximus lacinia viverra. Praesent sed efficitur nulla, dapibus convallis 
+                lorem. Morbi tellus dolor, fringilla quis elit ac, fermentum iaculis mi. Donec 
+                elementum pulvinar nisi, eget rhoncus quam mollis et. Cras sed orci nec massa tempus 
+                pulvinar. Vivamus rhoncus leo vitae risus interdum, et condimentum nibh tincidunt. 
+                In hac habitasse platea dictumst.</p>
+               
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Praesent nisl dolor, pulvinar et quam in, porta rhoncus ex. 
+                Duis pulvinar eros ligula, sit amet laoreet sapien auctor 
+                sit amet. Morbi semper leo vel eros tincidunt volutpat. Ut 
+                fringilla convallis lacus quis posuere. In nibh tortor, 
+                congue at semper vitae, tristique dictum nulla. Lorem ipsum 
+                dolor sit amet, consectetur adipiscing elit. Cras nec leo 
+                malesuada, blandit velit sit amet, egestas elit. Donec 
+                pellentesque arcu leo, sed dictum urna scelerisque vel.</p>
 
-<body>
-  <h1>HTML Rocks!</h1>
-  <p>
-    <button  onclick="helloWorld()">Prints Hello World to the Developer console</button>
-  </p>
-  <hr>
-  <form id="addForm">
-    <label for="num1">Number 1:</label>
-    <input type="number" id="num1" name="num1" required>
-    <br>
-    <label for="num2">Number 2:</label>
-    <input type="number" id="num2" name="num2" required>
-    <br>
-    <button type="submit">Add Numbers</button>
-  </form>
+              <p>Vestibulum consequat vehicula libero, suscipit aliquet dui vehicula vel. 
+                Aliquam maximus lacinia viverra. Praesent sed efficitur nulla, dapibus convallis 
+                lorem. Morbi tellus dolor, fringilla quis elit ac, fermentum iaculis mi. Donec 
+                elementum pulvinar nisi, eget rhoncus quam mollis et. Cras sed orci nec massa tempus 
+                pulvinar. Vivamus rhoncus leo vitae risus interdum, et condimentum nibh tincidunt. 
+                In hac habitasse platea dictumst.</p>
 
-  <label id="result">Result:</label>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+                Praesent nisl dolor, pulvinar et quam in, porta rhoncus ex. 
+                Duis pulvinar eros ligula, sit amet laoreet sapien auctor 
+                sit amet. Morbi semper leo vel eros tincidunt volutpat. Ut 
+                fringilla convallis lacus quis posuere. In nibh tortor, 
+                congue at semper vitae, tristique dictum nulla. Lorem ipsum 
+                dolor sit amet, consectetur adipiscing elit. Cras nec leo 
+                malesuada, blandit velit sit amet, egestas elit. Donec 
+                pellentesque arcu leo, sed dictum urna scelerisque vel.</p>
+  
+              <p>Vestibulum consequat vehicula libero, suscipit aliquet dui vehicula vel. 
+                Aliquam maximus lacinia viverra. Praesent sed efficitur nulla, dapibus convallis 
+                lorem. Morbi tellus dolor, fringilla quis elit ac, fermentum iaculis mi. Donec 
+                elementum pulvinar nisi, eget rhoncus quam mollis et. Cras sed orci nec massa tempus 
+                pulvinar. Vivamus rhoncus leo vitae risus interdum, et condimentum nibh tincidunt. 
+                In hac habitasse platea dictumst.</p>
 
-  <hr>
+                <!--buttons
+                These werent made fancy or given styling due to how long I fought with the address-->
+                <div class="radio-group">
+                  <label><input type="radio" name="option" value="This is an option"> This is an option</label><br>
+                  <label><input type="radio" name="option" value="This is also an option"> This is also an option</label><br>
+                  <label><input type="radio" name="option" value="one last option"> one last option</label><br>
+                </div>
 
-  <button id="jokeButton">Get a Random Joke</button>
-  <p id="joke"></p>
+                
+                <button onclick="showSelectedOption()">Show Selected Option</button>
+          </div>
+          
+          <address>
+            <p>The Awesome Company</p>
+            <p>102-112 Frail Bend Bridge<br>
+            The Dwindlings<br>
+            Little Hornet<br>
+            HX3 9ZQ<br>
+            UK</p>
+          </address>
+          
+        </article>
+    </div>
 
-  <script type="module" script="js/main.js">
-    import {helloWorld, add, fetchRandomJoke} from './js/main.js';
-
-    // This shows how to assign a function to the window object
-    // so that it can be called from the browser console
-    window.helloWorld = helloWorld;
-
-    // This shows how to add an event listener to a button in the HTML
-    // and call a function when the button is clicked
-    const form = document.getElementById('addForm');
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const num1 = parseFloat(document.getElementById('num1').value);
-      const num2 = parseFloat(document.getElementById('num2').value);
-      try{
-        const result = add(num1, num2);
-        document.getElementById('result').textContent = `Result: ${result}`;
-      }catch(e){
-        console.error(e);
-        document.getElementById('result').textContent = `Error: ${e.message}`;
+    <script>
+      function showSelectedOption() {
+          let options = document.getElementsByName("option");
+          
+          let selectedValue = "";
+          for (let option of options) {
+              if (option.checked) {
+                  selectedValue = option.value;
+                  break;
+              }
+          }
+          
+          if (selectedValue) {
+              alert("You selected: " + selectedValue);
+          } else {
+              alert("Please select an option.");
+          }
       }
-
-    });
-
-    // this shows how to add an event listener to a button in the HTML
-    // that calls a function that fetches a random joke from an API
-    // and displays it on the page
-    const jokebtn = document.getElementById('jokeButton');
-    const jokeresult = document.getElementById('joke');
-    jokebtn.addEventListener('click', async () => {
-      try {
-        jokeresult.textContent = 'Loading...';
-        const joke = await fetchRandomJoke();
-        document.getElementById('joke').textContent = joke;
-      } catch (e) {
-        console.error(e);
-        document.getElementById('joke').textContent = `Error: ${e.message}`;
-      }
-    });
   </script>
-
-</body>
-
+  </body>
 </html>

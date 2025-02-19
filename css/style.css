@@ -1,4 +1,76 @@
-h1{
-  border-color: #d3e644;
-  border-style: dashed;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  width: 210mm; /* constrain the letter elements to the size of the letter article */
+  min-height: 297mm;
+  background: #fff;
+}
+
+.letter {
+  margin: 0;
+  background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.5)), 
+        url("../img/top.png") top left no-repeat, 
+        url('../img/bottom.png') bottom left no-repeat;
+  position: relative;
+  border-top: 1mm solid red;  /* borders */
+  border-bottom: 1mm solid red;
+}
+
+article {
+  width: 210mm;
+  min-height: 297mm; /* set to min height to allow expansion downwards with  more text */
+  position: relative;
+  padding-bottom: 50mm; 
+}
+
+h1 {
+  position: relative;
+  top: 12mm;
+  left: 20mm;
+  width: 128px;
+  height: 128px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 44px 0;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  margin-bottom: 100px;
+  background:
+    url("../img/logo.png");
+  /*filter: drop-shadow(0px 0px 5px #000);*/
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5); /* box shadow to replace shadow filter*/
+  border-radius: 50%;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+}
+
+/*Text container that creates the columns */
+.textContain {
+  margin: 10px;
+  padding: 20px;
+  column-count: 2;
+  column-span: 1;
+  padding-bottom: 20mm; 
+}
+
+/*The most frustrating element to get to behave
+I had to fiddle with this a ton to get it to stop moving around, 
+it was a html issue at the end of the day*/
+address {
+  position: absolute;
+  bottom: 10mm; 
+  right: 20mm;
+  color: black;
 }
